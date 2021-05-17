@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main" align="center">
+<ul class="list-group list-group-flush">
+    {% for note in object_list %}
+
+
+        <h4>{{ note.title }}</h4>
+        <p>{{ note.description|truncatechars:":3" }}</p>
+        <p class="">{{ note.date_create }}</p>
+        <div class="right">
+        <a class="btn btn-primary" href="{{ note.get_absolute_url }}">Update</a>
+        <a class="btn btn-danger" href="{% url 'note:delete' note.pk%}">Delete</a>
+        </div>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'users/main.html' %}
+{% block content %}
+<div align="center"  >
+<h1>Create an account</h1>
+<p>Please, sign up using the following form:</p>
+<form method="post" class="w-25 p-3">
+    <div class="form-group row justify-content-center">
+{{ form.as_p }}
+{% csrf_token %}
+    </div>
+<p><input type="submit" value="Create my account"></p>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="main" align="center">
+<div>
+    <H3>{{ object.title }}</H3>
+    <p>{{ object.description }}</p>
+    <p>{{ object.category }}</p>
+    <p>{{ object.date_appoint }}</p>
+</div>
+        <div class="right ">
+<a class="btn btn-primary" href="{{ object.get_absolute_url }}">Update</a>
+<a class="btn btn-danger" href="{% url 'note:delete' object.pk%}">Delete</a>
+        </div>
+</div>
+{% endblock %}
