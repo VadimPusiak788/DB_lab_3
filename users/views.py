@@ -6,4 +6,4 @@ from .forms import UserCreationForm
 class RegisterUser(CreateView):
     template_name = 'registration/register.html'
     form_class = UserCreationForm
-    success_url = '../callendar/'
+    success_url = '../'
