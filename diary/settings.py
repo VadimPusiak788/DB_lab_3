@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -80,15 +81,20 @@ WSGI_APPLICATION = 'diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'debfg6aod5la3s',
+#         'USER': 'hmqqqforfrogmu',
+#         'PASSWORD': '0d02f77a6c28e8aa1bf08538d97b48189a9214a4c014d21e7e2813937f2dd3e6',
+#         'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
+#         'PORT': 5432
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'debfg6aod5la3s',
-        'USER': 'hmqqqforfrogmu',
-        'PASSWORD': '0d02f77a6c28e8aa1bf08538d97b48189a9214a4c014d21e7e2813937f2dd3e6',
-        'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
-        'PORT': 5432
-    }
+    'default': dj_database_url.config(
+        default=dj_database_url.config(('DATABASE_URL'))
+    )
 }
 
 
