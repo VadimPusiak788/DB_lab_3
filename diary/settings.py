@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'immense-brushlands-19957.herokuapp.com']
 
-
+#postgres://hmqqqforfrogmu:0d02f77a6c28e8aa1bf08538d97b48189a9214a4c014d21e7e2813937f2dd3e6@ec2-54-160-96-70.compute-1.amazonaws.com:5432/debfg6aod5la3s
 # Application definition
 
 INSTALLED_APPS = [
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'diary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lab_2',
-        'USER': 'vadim',
-        'PASSWORD': '426879',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
+        'NAME': 'debfg6aod5la3s',
+        'USER': 'hmqqqforfrogmu',
+        'PASSWORD': '0d02f77a6c28e8aa1bf08538d97b48189a9214a4c014d21e7e2813937f2dd3e6',
+        'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
+        'PORT': 5432
     }
 }
 
